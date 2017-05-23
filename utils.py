@@ -138,8 +138,6 @@ def histogram_fixed_width(values, value_range, nbins=100):
 
     #counts = tf.Variable(...) <= array_ops.zeros_like(indices, dtype=dtypes.int32))
     #return tf.scatter_add(counts, indices, array_ops.ones_like(indices, dtype=dtypes.int32)), indices
-    print('test')
-    print(indices, nbins)
     return math_ops.unsorted_segment_sum(
         array_ops.ones_like(indices, dtype=dtypes.float32),
         indices,
@@ -147,10 +145,10 @@ def histogram_fixed_width(values, value_range, nbins=100):
 
 def feature_histogram_matching(source, template, value_range, nbins):
 
-    s_value_range = [tf.reduce_min(source), tf.reduce_max(source)]
-    t_value_range = [tf.reduce_min(template), tf.reduce_max(template)]
-    #s_value_range = value_range
-    #t_value_range = value_range
+    #s_value_range = [tf.reduce_min(source), tf.reduce_max(source)]
+    #t_value_range = [tf.reduce_min(template), tf.reduce_max(template)]
+    s_value_range = value_range
+    t_value_range = value_range
     t_values = tf.linspace(t_value_range[0], t_value_range[1], nbins)
 
     s_counts, indices = histogram_fixed_width(source, s_value_range, nbins)
