@@ -46,28 +46,33 @@ class Vgg19:
         self.conv1_1 = self.conv_layer(bgr, "conv1_1")
         self.conv1_2 = self.conv_layer(self.conv1_1, "conv1_2")
         self.pool1 = self.max_pool(self.conv1_2, 'pool1')
+        self.pool1_avg = self.avg_pool(self.conv1_2, 'pool1_avg')
 
         self.conv2_1 = self.conv_layer(self.pool1, "conv2_1")
         self.conv2_2 = self.conv_layer(self.conv2_1, "conv2_2")
         self.pool2 = self.max_pool(self.conv2_2, 'pool2')
+        self.pool2_avg = self.avg_pool(self.conv2_2, 'pool2_avg')
 
         self.conv3_1 = self.conv_layer(self.pool2, "conv3_1")
         self.conv3_2 = self.conv_layer(self.conv3_1, "conv3_2")
         self.conv3_3 = self.conv_layer(self.conv3_2, "conv3_3")
         self.conv3_4 = self.conv_layer(self.conv3_3, "conv3_4")
         self.pool3 = self.max_pool(self.conv3_4, 'pool3')
+        self.pool3_avg = self.avg_pool(self.conv3_4, 'pool3_avg')
 
         self.conv4_1 = self.conv_layer(self.pool3, "conv4_1")
         self.conv4_2 = self.conv_layer(self.conv4_1, "conv4_2")
         self.conv4_3 = self.conv_layer(self.conv4_2, "conv4_3")
         self.conv4_4 = self.conv_layer(self.conv4_3, "conv4_4")
         self.pool4 = self.max_pool(self.conv4_4, 'pool4')
+        self.pool4_avg = self.avg_pool(self.conv4_4, 'pool4_avg')
 
         self.conv5_1 = self.conv_layer(self.pool4, "conv5_1")
         self.conv5_2 = self.conv_layer(self.conv5_1, "conv5_2")
         self.conv5_3 = self.conv_layer(self.conv5_2, "conv5_3")
         self.conv5_4 = self.conv_layer(self.conv5_3, "conv5_4")
         self.pool5 = self.max_pool(self.conv5_4, 'pool5')
+        self.pool5_avg = self.avg_pool(self.conv5_4, 'pool5_avg')
 
         self.fc6 = self.fc_layer(self.pool5, "fc6")
         assert self.fc6.get_shape().as_list()[1:] == [4096]
