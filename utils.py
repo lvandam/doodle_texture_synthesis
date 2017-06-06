@@ -4,7 +4,7 @@ import skimage.transform
 
 # returns image of shape [224, 224, 3]
 # [height, width, depth]
-def load_image(path):
+def load_image(path, width, height):
     # load image
     img = skimage.io.imread(path)
     img = img / 255.0
@@ -16,5 +16,5 @@ def load_image(path):
     xx = int((img.shape[1] - short_edge) / 2)
     crop_img = img[yy: yy + short_edge, xx: xx + short_edge]
     # resize to 224, 224
-    resized_img = skimage.transform.resize(crop_img, (224, 224))
+    resized_img = skimage.transform.resize(crop_img, (width, height))
     return resized_img
