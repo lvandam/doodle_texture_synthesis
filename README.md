@@ -16,7 +16,7 @@ To further improve the quality of the resulting composition we make use of sever
 * [cuDNN](https://developer.nvidia.com/cudnn) 5.0+
 
 #### After installing the dependencies: 
-* Download the [VGG-19 tensorflow weights](https://github.com/machrisaa/tensorflow-vgg)
+* Download the [VGG-19 TensorFlow weights](https://mega.nz/#!xZ8glS6J!MAnE91ND_WyfZ_8mvkuSa2YcA7q-1ehfSm-Q1fxOvvs)
 
 ## Usage
 Run the iPython notebook `transfer.ipynb` and change the parameters. The code is sufficiently commented to explain itself.
