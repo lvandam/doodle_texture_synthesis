@@ -22,17 +22,19 @@ To further improve the quality of the resulting composition we make use of sever
 Run the iPython notebook `transfer.ipynb` and change the parameters. The code is sufficiently commented to explain itself.
 
 ## Examples
-###Loss functions
-| Input image | Gram | Gram + Histogram + TV |
-|:-------------:|:-------------:|:-----:|
-| <img src="examples/starrynight_small_resized.png" width="250"> | <img src="examples/gram_starrynight_iter200.png" width="250"> | <img src="examples/gram_hist_tv_starrynight_iter200.png" width="250"> |
-| <img src="examples/panter_resized.png" width="250"> | <img src="examples/gram_panter_iter200.png" width="250"> | <img src="examples/gram_hist_tv_panter_iter200.png" width="250"> |
-| <img src="examples/pebbles_resized.png" width="250"> | <img src="examples/gram_pebbles_iter200.png" width="250"> | <img src="examples/gram_hist_tv_pebbles_iter200.png" width="250"> |
+### Loss functions
+<table>
+<tr><th>Input image</th><th>Gram</th><th>Gram + Histogram + TV</th></tr>
+<tr><td><img src="examples/starrynight_small_resized.png" width="250"></td><td><img src="examples/gram_starrynight_iter200.png" width="250"></td><td><img src="examples/gram_hist_tv_starrynight_iter200.png" width="250"></td></tr>
+
+<tr><td><img src="examples/panter_resized.png" width="250"></td><td><img src="examples/gram_panter_iter200.png" width="250"></td><td><img src="examples/gram_hist_tv_panter_iter200.png" width="250"></td></tr>
+
+<tr><td><img src="examples/pebbles_resized.png" width="250"></td><td><img src="examples/gram_pebbles_iter200.png" width="250"></td><td><img src="examples/gram_hist_tv_pebbles_iter200.png" width="250"></td></tr>
+</table>
 
 ### Doodle masking
 <table>
 <tr><th>Input image</th><th>Corresponding mask</th><th>Synthesized</th><th>Pyramid</th></tr>
 <tr><td><img src="examples/panter_resized.png" width="250"></td><td><img src="examples/mask.jpeg" width="250"></td><td rowspan="2"><img src="examples/triangle_tiger_panter_nopyramid_iter200.png" width="250"></td><td rowspan="2"><img src="examples/triangle_tiger_panter_pyramid_iter50.png" width="250"></td></tr>
 <tr><td><img src="examples/tiger_resized.png" width="250"></td><td><img src="examples/mask_inv.jpg" width="250"></td></tr>
-
 </table>
